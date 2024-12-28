@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Sentiment Analysis</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+        <form id="urlForm">
+            <label for="urlInput">Enter the URL of the article:</label>
+            <input type="url" id="urlInput" placeholder="https://example.com/article" required>
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Analysis Result</h2>
+            <p id="results"></p>
+        </div>
+
+
+
+        <div class="sentiment">
+            <h3>Overall Sentiment:</h3>
+            <p id="sentiment"></p>
+        </div>
+        <div class="confidence">
+            <h3>Confidence Level:</h3>
+            <p id="confidence"></p>
+        </div>
+        <div class="topics">
+            <h3>Key Topics:</h3>
+            <ul id="keyTopics"></ul>
+        </div>
+        <div class="entities">
+            <h3>Named Entities:</h3>
+            <ul id="entities"></ul>
+        </div>
+        <div class="emotion">
+            <h3>Emotional Analysis:</h3>
+            <canvas id="emotionChart"></canvas>
+        </div>
+        
+
+
+
+        
+    </div>
+
+
+    <script src="/js/formHandler.js"></script>
+</body>
+</html>
