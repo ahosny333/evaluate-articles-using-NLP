@@ -49,7 +49,7 @@ async function post_data(t){
     data_obj.msg = t;
 
 
-    const response = await fetch('http://localhost:8000/analyze-sentiment',
+    const response = await fetch('/analyze-sentiment',
     {
         method: 'POST', 
         credentials: 'same-origin', 

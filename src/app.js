@@ -5,8 +5,6 @@ const dotenv = require('dotenv');
 const axios = require('axios');
 
 dotenv.config();
-
-
 const API_KEY = process.env.API_KEY;
 
 async function analyzeSentiment(text) {
@@ -42,8 +40,8 @@ const cors = require('cors');
 app.use(cors());
 app.use(bodyParser.json());
 
-console.log(__dirname);
-console.log(API_KEY);
+//console.log(__dirname);
+//console.log(API_KEY);
 
 
 
@@ -56,16 +54,16 @@ app.get('/test', function (req, res) {
 
 app.post('/analyze-sentiment', async (req, res) => {
     const text  = req.body.msg;
-    console.log("posted data to server");
-    console.log(text);
+    //console.log("posted data to server");
+    //console.log(text);
     const data = await analyzeSentiment(text);
     //console.log(data);
     res.send(data);
 });
 
 // Designates what port the app will listen to for incoming requests
-app.listen(8000, function () {
-    console.log('Example app listening on port 8000!');
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!');
 });
 
 
